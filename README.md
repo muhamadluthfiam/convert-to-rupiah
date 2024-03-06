@@ -5,48 +5,48 @@ A simple utility library to format currency and convert numbers to words in Indo
 ### Installation
 
 ```bash
-npm install convert-rupiah
+npm install convert-to-rupiah
 ```
 
 ### Usage
 
 ```javascript
-import { convertRupiah, convertToWords } from 'convert-rupiah';
+import { convertToRupiah, convertToWords } from 'convert-rupiah';
 
-console.log(convertRupiah(50000));
+console.log(convertToRupiah(50000));
 // Output: Rp 50.000,00
 
-console.log(convertRupiah(50000, { symbol: 'IDR' }));
+console.log(convertToRupiah(50000, { symbol: 'IDR' }));
 // Output: IDR 50.000,00
 
-console.log(convertRupiah(50000, { formal: false }));
+console.log(convertToRupiah(50000, { formal: false }));
 // Output: Rp 50.000,00
 
-console.log(convertRupiah(50000, { formal: false, symbol: 'IDR' }));
+console.log(convertToRupiah(50000, { formal: false, symbol: 'IDR' }));
 // Output: IDR 50.000,00
 
-console.log(convertRupiah(50000, { dot: '.', floatingPoint: 0 }));
+console.log(convertToRupiah(50000, { dot: '.', floatingPoint: 0 }));
 // Output: Rp 50.000
 
-console.log(convertRupiah(50000, { dot: ',', decimal: '.' }));
+console.log(convertToRupiah(50000, { dot: ',', decimal: '.' }));
 // Output: Rp 50.000,00
 
-console.log(convertRupiah(50000, { replaceZeroDecimals: true }));
+console.log(convertToRupiah(50000, { replaceZeroDecimals: true }));
 // Output: Rp 50.000,-
 
-console.log(convertRupiah(50000, { useUnit: true, floatingPoint: 0 }));
+console.log(convertToRupiah(50000, { useUnit: true, floatingPoint: 0 }));
 // Output: Rp 50rb
 
-console.log(convertRupiah(50000, { symbol: 'IDR', formal: false, useUnit: true, K: true, floatingPoint: 0 }));
+console.log(convertToRupiah(50000, { symbol: 'IDR', formal: false, useUnit: true, K: true, floatingPoint: 0 }));
 // Output: IDR 50rb
 
-console.log(convertRupiah(50000, { symbol: false, useUnit: true, longUnit: true, spaceBeforeUnit: true, floatingPoint: 0 }));
+console.log(convertToRupiah(50000, { symbol: false, useUnit: true, longUnit: true, spaceBeforeUnit: true, floatingPoint: 0 }));
 // Output: 50 ribu
 
-console.log(convertRupiah(50750000000, { useUnit: true, longUnit: true, spaceBeforeUnit: true, formal: false }));
+console.log(convertToRupiah(50750000000, { useUnit: true, longUnit: true, spaceBeforeUnit: true, formal: false }));
 // Output: Rp 50,75 milyar
 
-console.log(convertRupiah(5250, { useUnit: true, symbol: null, K: true }));
+console.log(convertToRupiah(5250, { useUnit: true, symbol: null, K: true }));
 // Output: 5,25k
 ```
 
